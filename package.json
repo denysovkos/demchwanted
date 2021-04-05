@@ -1,0 +1,13 @@
+{
+  "name": "demchwanted",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Denysov Kostiantyn",
+  "license": "ISC"
+}
