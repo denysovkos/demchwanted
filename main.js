@@ -24,15 +24,15 @@ const computeSeries = (x, n, start) => {
 }
 
 
-const sin = (x) => {
+const sinA = (x) => {
 	console.log(`Calculate sin for: ${x}`);
 	return rounded(computeSeries(x, x, 3));
 }
 
-console.log(sin(Math.PI / 6)); // 0.5
+console.log(sinA(Math.PI / 6)); // 0.5
 
 module.exports = {
-	sin,
+	sinA,
 	rounded,
 	computeSeries,
 	factorial
