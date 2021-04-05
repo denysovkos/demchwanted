@@ -1,5 +1,5 @@
 const {
-	sin,
+	sinA,
 	rounded,
 	computeSeries,
 	factorial
@@ -82,18 +82,18 @@ describe("Compute series tests", () => {
 
 describe("Sin tests", () => {
 	test("Should properly calculate sinus 5 -> -0.9589238321", () => {
-		expect(sin(5)).toBe(-0.9589238321)
+		expect(sinA(5)).toBe(-0.9589238321)
 	})
 
 	test("Should properly calculate sinus 12 -> 204.9008225106", () => {
-		expect(sin(12)).toBe(204.9008225106)
+		expect(sinA(12)).toBe(204.9008225106)
 	})
 
 	test("Should properly calculate sinus 15 -> 31192.0378012414", () => {
-		expect(sin(15)).toBe(31192.0378012414)
+		expect(sinA(15)).toBe(31192.0378012414)
 	})
 
 	test("Should properly calculate sinus 25 -> 2572957340.8759212", () => {
-		expect(sin(25)).toBe(2572957340.8759212)
+		expect(sinA(25)).toBe(2572957340.8759212)
 	})
 })

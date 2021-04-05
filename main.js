@@ -47,7 +47,7 @@ const requestListener = function (req, res) {
 	}
 
 	res.writeHead(403, { 'Content-Type': 'text/plain' })
-	res.end(`${sin(+queryObject.n)}`);
+	res.end(`${sinA(+queryObject.n)}`);
 };
 
 const server = http.createServer(requestListener);
