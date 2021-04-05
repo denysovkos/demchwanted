@@ -1,3 +1,9 @@
+const http = require("http");
+const url = require('url');
+
+const host = 'localhost';
+const port = 8000;
+
 const rounded = (x) => {
 	return parseFloat(x.toFixed(10));
 }
@@ -30,6 +36,24 @@ const sin = (x) => {
 }
 
 console.log(sin(Math.PI / 6)); // 0.5
+
+const requestListener = function (req, res) {
+	const queryObject = url.parse(req.url,true).query;
+	if (!queryObject.n) {
+		res.writeHead(403, { 'Content-Type': 'text/plain' })
+		res.end('You should pass N to calculate sin');
+
+		return;
+	}
+
+	res.writeHead(403, { 'Content-Type': 'text/plain' })
+	res.end(`${sin(+queryObject.n)}`);
+};
+
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {
+	console.log(`Server is running on http://${host}:${port}`);
+});
 
 module.exports = {
 	sin,
