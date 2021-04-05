@@ -16,7 +16,7 @@ const factorial = (x) => {
 	return n;
 }
 
-const computeSeries = (x, n, start) => {
+const computeSeries = (x, n, start = 0) => {
 	const iterations = 20;
 	let multiplier = 1;
 	let i = start;
